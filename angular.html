@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title> product web page</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="contectus.css">
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+		<!-- <script src="javascripts/handlebars.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="angular.css">
+		
+	</head>
+	<body ng-controller="productController">
+	<div class="top">
+		<nav class = "navbar navbar-inverse">
+			<div class ="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#/Store">Store</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+						<li><a href="#/About">About</a></li>
+						<li><a href="#/Catalog">Catalog</a></li>
+						<li><a href="#/Contact">Contact</a></li>
+					</ul>
+
+                    <span class='btn btn-info btn-sm total' >TOTAL:  {{totalPrice() | currency}}</span>
+				</div>
+
+                <a href="#/Checkout"><img class="cart" src="images/cart.png" alt="Smiley face" height="32" width="32"> </a>
+
+			</div>
+		</nav>
+		</div>
+		<div class="wrap ">
+			<div class="col-md-3 "id="leftCol">
+				<ul class="nav nav-pills nav-stacked" >
+					<li class="active side"><a href="https:/www.google.com" target="_blank">Click for google</a></li>
+					<li class="side"><a href="https://www.yahoo.com" target="_blank">Click for Yahoo</a></li>
+					<li class="side"><a href="https://login.live.com/" target="_blank">Click for Gmail</a></li>
+					<li class="side"><a href="https://twitter.com/" target="_blank">Click for twitter</a></li>
+					<li class="side"><a href="https://facebook.com/" target="_blank">Click for Facebook</a></li>
+					
+				</ul>
+				</br>
+					<button class="nav nav-pills col-md-3 add btn-info btn-sm">Search</button>
+					<button class="nav nav-pills col-md-3 add btn-info btn-sm">Social</button>
+					<button class="nav nav-pills col-md-3 add btn-info btn-sm">Movies</button>
+				</br>
+				</br>
+				
+			
+			</div>
+		
+<!--		</div>-->
+		<div ng-view>test</br>test</div>
+</div>
+		</div>
+			<script type = "text/javascript" src="angular.js"></script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+body{
+background-image: url("images/bg1.jpg");
+   
+}
+input:focus {
+    background-color: lightgoldenrodyellow;
+}
+
+.pro_row{
+margin-left: 50px;
+    box-shadow: 10px 10px 5px #888888;
+}
+.top{
+
+    background: #fff none repeat scroll 0 0;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 98;
+
+}
+.add{
+    display: inline-block;
+    margin-top: 20px;
+}
+.about{
+text-align: justify;
+height: 1200px;
+background: lightblue;
+    opacity: .5;
+    
+}
+.wrap{
+position: relative;
+    margin-top: 80px;
+}
+.total{
+    float: right;
+    margin-right: 20PX;
+    margin-top: 10px;
+    background-color: #0066CC;
+    border: 
+}
+.cart{
+    float: right;
+margin-right: 10px;
+margin-top: 10px;
+    
+}
+.nav-pills{
+		margin-left:20px;
+		text-indent:20px;
+		border-radius:5px;
+		border:1px solid black;
+		
+}
+.btn_cart{
+margin-top: 20px;
+}
+.ser{
+margin-left: 13px;
+}
+.side{
+	border-bottom:1px solid black;
+}
+.jumbotron {
+    padding: 20px;
+}
+.glyphicon{
+		margin-right:60px;
+}
+.productName{
+		margin-left:50px;
+		
+}
+.productDes{
+		margin-left:50px;
+	
+}
+.productPrice{
+		margin-right:80px;
+		margin-top:50px;
+}
+.delete{
+		margin-top:20px;
+}
+.gap{
+margin-top: 20px;
+}
+.glyphicon-remove-sign{
+	border-radius: 100%;
+	padding: 0px;
+    margin-left: 10px;
+	
+}
+.edit{
+    margin-top:20px;
+}
+

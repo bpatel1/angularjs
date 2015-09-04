@@ -1,0 +1,47 @@
+	<div class="store">
+            	<div class="col-md-9">
+				<div class="form-group form-inline">
+				<label>Search</label>
+				<input type="text" class="ser form-control" placeholder="Search item by name" ng-model="search" />
+				
+				<!-- <input type="text" ng-model="search.Name" /> -->
+				</div>
+				<form >
+					<div class="form-group form-inline">
+						<label>Add Item</label>
+
+						<input type="text" class="form-control" placeholder="Item Name" ng-model="item.ItemName">
+						<input type="text" class="form-control" placeholder="Description" ng-model="item.ItemDescription">
+						<input type="text" class="form-control" placeholder="Price" ng-model="item.ItemPrice">
+						<input type="number" class="form-control" placeholder="Quantity" ng-model="item.ItemQuantity">
+						<!-- <input type="Button" value="Add" ng-click="addItem(item)" /> -->
+						<button class="btn-info btn-sm" ng-click="addItem(item)">Add Item</button>
+					</div>
+					
+					
+					<div ng-repeat="item in items | filter:search" class="container-fluid gap "> 
+						<!-- <button {{id}} class=" delete glyphicon glyphicon-remove pull-right delete"></button> -->
+						<div class="row pro_row col-xs-9 col-sm-9 col-md-9 " style="background-color:lavender;">
+							<div class="col-xs-6 col-sm-6 col-md-6 ">
+								<h3 ng-hide="editmode">{{ item.ItemName }}</h3> <input type="text" ng-show="editmode" ng-model="item.ItemName">
+								<h4 ng-hide="editmode">{{ item.ItemDescription }}</h4><input type="text" ng-show="editmode"ng-model="item.ItemDescription">
+							</div>
+						
+						    <div class="col-xs-6 col-md-3">
+						    	<span class="productPrice" ng-hide="editmode"> Price:{{ item.ItemPrice | currency}}</span><input type="text" ng-show="editmode"ng-model="item.item.ItemPrice">
+						    	<span class="productPrice" ng-hide="editmode">Quantity:{{ item.ItemQuantity }}</span><input type="text" ng-show="editmode"ng-model="item.ItemQuantity">
+
+						    	<button type="submit" ng-hide="editmode" ng-click="editmode = true; editItem(item)" id="update">EDIT</button>
+						    	<button type="submit" ng-show="editmode" ng-click="editmode = false; saveFiled(item)" id="update">SAVE</button>
+						    </div>
+						    <div class="col-xs-6 col-md-3">
+						    
+						    	<button type="button" class="glyphicon glyphicon-remove-sign gap" ng-click="removeItem(item)">
+		          				</button>
+		          			</div>
+	          			</div>
+					</div>
+
+				</form>
+			</div>
+</div>
